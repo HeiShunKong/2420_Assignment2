@@ -1,7 +1,7 @@
 # 2420_assign2
 
 ## Step 1 
-Follow the video and create two droplets, VPC, and Firewall /
+Follow the video and create two droplets, VPC, and Firewall \
 Load Balancer: 146.190.13.16
 
 ## Step 2
