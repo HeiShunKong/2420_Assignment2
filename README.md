@@ -88,7 +88,7 @@ sudo vim /etc/caddy/Caddyfile
 ```
 Inside CaddyFile insert below code using vim Caddyfile
 ```
-http://143.244.208.55 {
+http://146.190.13.16 {
     root * /var/www
     reverse_proxy /api localhost:3030
     file_server
