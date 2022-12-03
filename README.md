@@ -1,7 +1,8 @@
 # 2420_assign2
 
 ## Step 1 
-Follow the video and create two droplets, VPC, and Firewall
+Follow the video and create two droplets, VPC, and Firewall /
+Load Balancer: 146.190.13.16
 
 ## Step 2
 Create a regular users on both droplets
@@ -136,14 +137,14 @@ WantedBy=multi-user.target
 
 ## Step 8
 1.Upload hello_web file to both droplets \
-using **sftp -i ~/.ssh/key user@droplet_ip **
+using **sftp -i ~/.ssh/key user@droplet_ip ** \
 2. Then move the hello_web file \
-using **mv hello_web.service /etc/systemd/system**
-3.sudo systemctl start hello_app.service
-4.sudo systemctl enable hello_app.service
-5.sudo groupadd --system caddy
+using **mv hello_web.service /etc/systemd/system** \
+3.sudo systemctl start hello_app.service \
+4.sudo systemctl enable hello_app.service \
+5.sudo groupadd --system caddy \
 6.sudo chown caddy:caddy /var/www/index.html \
-sudo chown caddy:caddy /var/www/src/index.js
+sudo chown caddy:caddy /var/www/src/index.js \
 7.sudo sh -c 'curl https://raw.githubusercontent.com/caddyserver/dist/master/init/caddy.service > /etc/systemd/system/caddy.service' \
 systemctl -daemon-reload \
 sudo systemctl start caddy \
