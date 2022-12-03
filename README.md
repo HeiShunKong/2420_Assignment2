@@ -69,7 +69,7 @@ start()
 ```
 
 6. Move html and src directories to both droplets 
-**sftp -i ~/.ssh/key_file_name user@droplet_ip
+**sftp -i ~/.ssh/key user@droplet_ip
 put -r src
 put -r html**
 7. Move html and src directories to correct place
@@ -128,4 +128,8 @@ WantedBy=multi-user.target
 ```
 
 ## Step 8
-Upload files to both droplets
+1.Upload hello_app file to both droplets \
+using **sftp -i ~/.ssh/key user@droplet_ip **
+2. Then move the hello_app file \
+using **mv hello_app.service /etc/systemd/system**
+
