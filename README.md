@@ -106,8 +106,8 @@ volta install node
 
 ## Step 7
 Write a service file on local machine to start node application
-1. Create a file **touch hello_app.service**
-2. Edit the file **vim hello_app.service**
+1. Create a file **touch hello_web.service**
+2. Edit the file **vim hello_web.service**
 ```
 [Unit]
 Description=runs a hello world webapp
@@ -121,15 +121,15 @@ Group=user
 Restart=always
 RestartSec=10
 TimeoutStopSec=90
-SyslogIdentifier=hello_app
+SyslogIdentifier=hello_web
 
 [Install]
 WantedBy=multi-user.target
 ```
 
 ## Step 8
-1.Upload hello_app file to both droplets \
+1.Upload hello_web file to both droplets \
 using **sftp -i ~/.ssh/key user@droplet_ip **
-2. Then move the hello_app file \
-using **mv hello_app.service /etc/systemd/system**
+2. Then move the hello_web file \
+using **mv hello_web.service /etc/systemd/system**
 
