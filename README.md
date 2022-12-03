@@ -20,6 +20,9 @@ tar xvf caddy_2.6.2_linux_amd64.tar.gz
 sudo chown root: caddy
 sudo cp caddy /usr/bin/**
 
+![](Screen%20Shot%202022-12-02%20at%2012.53.31%20PM.png)
+![](Screen%20Shot%202022-12-02%20at%2012.54.46%20PM.png)
+
 ## Step 4 
 On your local machine create two new directories **html** and **src**
 1. Create a new directory on local machine **mkdir 2420-assign-two**
@@ -68,10 +71,13 @@ const start = async () => {
 start()
 ```
 
-6. Move html and src directories to both droplets 
-**sftp -i ~/.ssh/key user@droplet_ip
-put -r src
-put -r html**
+6. Move html and src directories to both droplets  
+\sftp -i ~/.ssh/key user@droplet_ip\
+put -r src\
+put -r html
+
+![](Screen%20Shot%202022-12-02%20at%201.43.35%20PM.png)
+
 7. Move html and src directories to correct place
 
 sudo mkdir -p ../../var/www/\
@@ -103,7 +109,8 @@ curl https://get.volta.sh | bash
 source ~/.bashrc
 volta install node
 ```
-
+![](Screen%20Shot%202022-12-02%20at%206.06.23%20PM.png)
+![](Screen%20Shot%202022-12-02%20at%201.02.47%20PM.png)
 ## Step 7
 Write a service file on local machine to start node application
 1. Create a file **touch hello_web.service**
